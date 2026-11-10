@@ -40,18 +40,18 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). [Cần ghi ba ca mơ h
 
 ## 5. Kết quả YOLO
 
-- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: [cần điền từ Colab]
-- Các tham số thay đổi so với notebook nếu có và lý do: [cần điền từ phiên chạy]
-- Đường dẫn best checkpoint trong phiên chạy: [cần điền từ Colab]
+- Runtime: T4 GPU đã chọn trên Colab; log train ghi `device: 0`. Phiên bản Ultralytics và Torch: [cần điền từ cell Colab nếu có].
+- Tham số train trong `args.yaml`: `yolo26n.pt`, `epochs=50`, `imgsz=640`, `batch=-1`, `seed=20260909`; khớp notebook.
+- Đường dẫn best checkpoint trong phiên chạy: `/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt` (không commit checkpoint).
 
 | Chỉ số trên 10 ảnh eval | Giá trị |
 |---|---:|
-| Precision | [chưa chạy] |
-| Recall | [chưa chạy] |
-| mAP50 | [chưa chạy] |
-| mAP50–95 | [chưa chạy] |
+| Precision | 0.5105 |
+| Recall | 0.3567 |
+| mAP50 | 0.3956 |
+| mAP50–95 | 0.2170 |
 
-[Cần tải kết quả Colab, đặt `assets/eval_predictions/` và `assets/yolo26_runs/` cạnh báo cáo, dẫn link đến ảnh eval và phân tích ít nhất một vật thể cụ thể.]
+Kết quả được lấy từ `model_eval_metrics.json` trong `day2_colab_outputs.zip`. Có đủ 10 ảnh dự đoán trong [eval_predictions/visuals](assets/eval_predictions/visuals/drive_051.jpg), [log train](assets/yolo26_runs/vehicle_annotation/results.csv) và [confusion matrix eval](assets/yolo26_runs/vehicle_eval/confusion_matrix.png). [Cần tự xem một ảnh, chỉ ra vật thể cụ thể và phân tích đúng/sai theo quan sát.]
 
 Trả lời bốn câu hỏi cuối notebook:
 
@@ -68,7 +68,7 @@ Trả lời bốn câu hỏi cuối notebook:
 
 ## 7. Tự đánh giá theo rubric
 
-Đã có 50 nhãn đúng cấu trúc và kết quả gold QC. Còn thiếu xác nhận self-QC bằng mắt, ba ca mơ hồ có ID ảnh, kết quả Colab và phân tích model. [Cần đối chiếu lại sau khi hoàn tất.]
+Đã có 50 nhãn đúng cấu trúc, kết quả gold QC và kết quả Colab trên 10 ảnh eval. Còn thiếu xác nhận self-QC bằng mắt, ba ca mơ hồ có ID ảnh, link Colab đã chạy và phân tích model cá nhân. [Cần đối chiếu lại sau khi hoàn tất.]
 
 ## 8. Công cụ AI và tài liệu tham khảo
 
