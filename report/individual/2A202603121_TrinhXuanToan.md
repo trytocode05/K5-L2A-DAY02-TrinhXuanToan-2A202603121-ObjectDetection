@@ -9,6 +9,7 @@ Các mục còn ghi `[cần điền]` phải được hoàn thiện từ quá tr
 - Email: [cần điền]
 - Lớp: K5-L2A
 - Link repo bài làm: https://github.com/trytocode05/K5-L2A-DAY02-TrinhXuanToan-2A202603121-ObjectDetection
+- Link notebook nguồn mở trong Colab: https://colab.research.google.com/github/trytocode05/K5-L2A-DAY02-TrinhXuanToan-2A202603121-ObjectDetection/blob/main/notebooks/day2_annotation_to_yolo.ipynb
 - Link Colab đã chạy: [cần điền sau khi chạy và cấp quyền xem]
 
 ## 2. Schema và mini guideline
